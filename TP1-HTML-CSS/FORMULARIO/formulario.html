@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario La Milonga</title>
+ 
+    <link rel="stylesheet" href="./formulario.css">
+</head>
+<body>
+    <div class="contenedor">
+        <a href="../index.html" class="logo">
+            <img src="../IMG-WEB/LOGO - copia.png" alt="Logo LA MILONGA">
+        </a>
+        <form action="#">
+            <div class="datos">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Ingrese su Nombre">
+
+                <label for="email">Mail</label>
+                <input type="email" name="email" id="email" placeholder="Ingrese su Mail">
+
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
+
+                <label for="fecha">Fecha de Reserva</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora de Reserva</label>
+                <input type="time" name="hora" id="hora" required>
+
+                <label for="personas">Número de Personas</label>
+                <select name="personas" id="personas" required>
+                    <option value="1">1 Persona</option>
+                    <option value="2">2 Personas</option>
+                    <option value="3">3 Personas</option>
+                    <option value="4">4 Personas</option>
+                    <option value="5">5 Personas</option>
+                    <option value="6">6 Personas</option>
+                    <option value="7">7 Personas</option>
+                    <option value="8">8 Personas</option>
+                    <option value="9">9 Personas</option>
+                    <option value="10+">10 o más Personas</option>
+                </select>
+
+                <label for="consulta">Comentarios</label>
+                <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
+
+                <input type="submit" value="Enviar Comentario" class="boton">
+                <input type="reset" value="Borrar" class="boton">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

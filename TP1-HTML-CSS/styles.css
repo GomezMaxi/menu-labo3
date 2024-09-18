@@ -1,0 +1,571 @@
+/* Estilo general */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #d85301;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.8em; text-align: center;}
+h3{ font-size: 2em;}
+h4{ font-size: 1.8em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+
+
+button{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    background-color: #e5de05;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    font-weight: bolder;
+}
+
+
+/* HEADER */
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: #ca5328;
+    position: fixed;
+        width: 100%;
+}
+header .contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo img{
+    width: 200px;
+    padding: 10px 15px;
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.menu-icono{
+    width: 50px;
+    cursor: pointer;
+}
+#menu{
+    display: none;
+}
+#menu:checked ~ .navbar{
+    display: block;
+    max-height: 300px;
+}
+
+
+.navbar{
+    max-height: 0; /* Altura inicial*/
+    overflow: hidden;
+    background-color: #d85301;
+    transition: max-height 0.5s ease-in-out;
+}
+.navbar ul{
+    margin-top: 0;
+    background-color: #ca5328;
+}
+.navbar ul li{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.navbar ul li a{
+    padding: 20px;
+    display: block;
+    color: #000000;
+    font-weight: bold;
+    
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    color: white;
+}
+
+/* Inicio */
+#inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ) 
+    ,url("./IMG-WEB/plato-principal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#inicio h1{
+    color: #eff5f5;
+}
+#inicio h2{
+    color: #eff5f5;
+}
+#inicio button{
+    padding: 20px 25px;
+    
+}
+
+
+/* Menu */
+#menu-lista{
+    background-color: white;
+    color: #eff5f5;
+    text-align: center;
+}
+/* Entrada */
+#menu-lista .contenedor-entrada{
+    padding: 80px 12px;
+}
+.contenedor-entrada{
+    background: linear-gradient(to top, #ca5328, black);
+}
+.contenedor-principal{
+    background: linear-gradient(to left, #ca5328, black);
+}
+.contenedor-postre{
+    background: linear-gradient(to right, #ca5328, black);
+}
+.contenedor-bebida{
+    background: linear-gradient(to top, #ca5328, black);
+}
+
+.contenedor-entrada h2{
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.contenedor-entrada p{
+    display: none;
+}
+.contenedor-entrada .entrada{
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 15px;
+}
+.entrada:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/empanadas.jpg");
+}
+.entrada:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/papas.jpg");
+}
+.entrada:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/picada.jpg");
+}
+/* Plato Principal */
+#menu-lista .contenedor-principal{
+    padding: 80px 12px;
+}
+.contenedor-principal h2{
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.contenedor-principal p{
+    display: none;
+}
+.contenedor-principal .principal{
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 15px;
+}
+.principal:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/milanesa.jpg");
+}
+.principal:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/parrilla.jpg");
+}
+.principal:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/hamburguesa.jpg");
+}
+.principal:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/pizza.jpg");
+}
+.principal:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/lomito.jpg");
+}
+/* Postres */
+#menu-lista .contenedor-postre{
+    padding:  80px 12px;
+}
+.contenedor-postre h2{
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.contenedor-postre p{
+    display: none;
+}
+.contenedor-postre .postre{
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 15px;
+}
+.postre:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/helado.jpg");
+}
+.postre:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/flan.jpg");
+}
+.postre:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/alfajor.jpg");
+}
+/* Bebidas */
+#menu-lista .contenedor-bebida{
+    padding:  80px 12px;
+}
+.contenedor-bebida h2{
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.contenedor-bebida p{
+    display: none;
+}
+.contenedor-bebida .bebida{
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 15px;
+}
+.bebida:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/cerveza.jpg");
+}
+.bebida:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/gaseosa.jpg");
+}
+.bebida:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/agua.jpg");
+}
+.bebida:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.7)
+    ) 
+    ,url("./IMG-WEB/vino.jpg");
+}
+
+
+.contacto{
+    width: 100%;
+    background-color: #180b00fe;
+    color: #eff5f5;
+    text-align: center;
+}
+.contacto .parte1{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    padding: 5px 12px;
+}
+.redes img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgb(255, 139, 97);
+    transition: 0.3s ease;
+}
+
+.redes img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+    transform: scale(1.1); /* Agrando tamaño*/
+}
+
+.redes a:nth-child(1) img:hover {
+    background-color: rgb(1, 41, 220);
+}
+
+.redes a:nth-child(2) img:hover {
+    background-color: #ee6706;
+}
+
+.redes a:nth-child(3) img:hover {
+    background-color: #1DA1F2;
+}
+.contacto .parte2{
+    background-color: rgb(255, 139, 97);
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+
+
+@media (max-width: 466px) {
+    header {
+        height: auto;
+    }
+    .navbar ul li a{
+        font-size: 1.1rem;
+    }
+    #inicio {
+        padding-top: 100px;
+    }
+    #inicio button {
+        font-size: 1em;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        word-wrap: break-word;/* Ajusto el ancho de palabras dentro del div */
+    }
+    h2{
+        font-size: 2em;
+        word-wrap: break-word;
+    }
+
+    .entrada, .principal, .postre, .bebida {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 945px) {
+    .logo img{
+        width: 250px;
+    }
+    header {
+        height: auto;
+    }
+    .navbar ul li a{
+        font-size: 1.35rem;
+    }
+    #inicio {
+        padding-top: 100px;
+    }
+    #inicio button {
+        padding: 10px 15px;
+        margin-bottom: 20px;
+    }
+
+    #inicio h1 {
+        font-size: 5em;
+    }
+
+    .contacto .parte1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .contacto .parte1 .box {
+        width: 100%;
+    }
+
+    .contacto .contenedor {
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: 1140px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .menu-icono {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        background-color: #ffffff;
+        max-height: none;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .navbar ul {
+        display: flex; /* Hago que la lista estén en una fila */
+        margin: 0;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul li a {
+        padding: 20px;
+        display: block;
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.3em;
+    }
+}
+
+
+@media (min-width: 1245px){
+    .logo img{
+        width: 350px;
+    }
+    .navbar ul li a {
+        font-size: 1.5em;
+    }
+    
+    .contenedor-principal .principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menu-lista .entrada-lista{
+        display: flex;
+        justify-content: center;
+    }
+    #menu-lista .principal-lista{
+        display: flex;
+        justify-content: center;
+    }
+    #menu-lista .postre-lista{
+        display: flex;
+        justify-content: center;
+    }
+    #menu-lista .bebida-lista{
+        display: flex;
+        justify-content: center;
+    }
+
+    #menu-lista p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #menu-lista h3{
+        margin-top: 0;
+    }
+    #menu-lista .entrada{
+        padding: 10px;
+    }
+    #menu-lista .principal{
+        padding: 10px;
+    }
+    #menu-lista .postre{
+        padding: 10px;
+    }
+    #menu-lista .bebida{
+        padding: 10px;
+    }
+   
+}
