@@ -41,5 +41,9 @@ PROBLEMAS
   ejecutarlo correctamente, por lo que tuve que recurrir a buscar informacion de otras fuentes para poder corregirlo. (El motivo
   de no haber usado bootstrap es que me enteré tarde de que podía ser utilizado, y para ese momento ya había completado el 80% de la web).
 
+  En bajas resoluciones, las opciones del menu ocultan la descripcion y el precio. La funcion del boton +info seria la de desplegar una web
+  aparte en la que se detallen mas cosas de la opcion seleccionada. Dicha web aplicaria para cualquier resolucion, es por eso que no utilice
+  ningun tipo de evento on-click o hover en bajas resoluciones.
+
  Si bien me hubiera gustado modificar muchas cosas respecto al css (elección de colores, imagenes, etc), decidí enviar el proyecto tal cual
  se aprecia porque considero que cumple con los requisitos del enunciado.
